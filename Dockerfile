@@ -1,4 +1,3 @@
-FROM openjdk:17
-WORKDIR /app
-COPY . .
-CMD ["java", "-cp", "src/main/java", "com.example.App"]
+FROM eclipse-temurin:17-jdk-alpine
+COPY target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
