@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/java-ci-cd-app.git'
+                git 'https://github.com/milinx/java-ci-cd-app.git'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t YOUR_DOCKER_USERNAME/java-app .'
+                sh 'docker build -t milinxgenix/java-app .'
             }
         }
     }
